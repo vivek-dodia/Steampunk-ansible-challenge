@@ -48,7 +48,7 @@
       ignore_errors: yes
 
     - name: Create Docker container for web page
-      community.general.docker_container:
+      community.docker.docker_container:
         name: "{{ docker_container_name }}"
         image: nginx
         state: started
