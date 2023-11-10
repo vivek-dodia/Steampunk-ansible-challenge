@@ -75,7 +75,7 @@
       become: true
 
     - name: Test if web page is accessible
-      ansible.builtin.cmd: "curl http://localhost:{{ application_port }}/"
+      ansible.builtin.command: "curl http://localhost:{{ application_port }}/"
       register: curl_output
       until: "curl_output.stdout.find('Hello world! I was deployed using Ansible.') != -1"
       retries: 10
