@@ -58,9 +58,11 @@
           - "{{ temp_dir.path }}:/usr/share/nginx/html"
         networks:
           - name: "{{ docker_network_name }}"
-        aliases: my_network
+            aliases:
+             - my_network
+
         healthcheck:
-          - test: [ "CMD", "curl", "--fail", "http://localhost:{{ application_port }}/" ]
+            test: [ "CMD", "curl", "--fail", "http://localhost:{{ application_port }}/" ]
             start_period: 30
 
     - name: Wait for Nginx container to start
