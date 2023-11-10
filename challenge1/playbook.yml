@@ -23,7 +23,7 @@
         prefix: web_deploy_
         #dir: /tmp
         register: temp_dir
-      check_mode: true
+        check_mode: true
 
     - name: Set permissions for temporary directory
       ansible.builtin.file:
