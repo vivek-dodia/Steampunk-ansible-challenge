@@ -44,7 +44,7 @@
         dest: " {{ temp_dir.path }}/index.html"
 
     - name: Create a network for Docker containers
-      shell: "docker network create {{ docker_network_name }}"
+      ansible.builtin.shell: "docker network create {{ docker_network_name }}"
       ignore_errors: yes
 
     - name: Create Docker container for web page
