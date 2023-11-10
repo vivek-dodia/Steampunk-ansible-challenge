@@ -57,7 +57,7 @@
         volumes:
           - "{{ temp_dir.path }}:/usr/share/nginx/html"
         networks:
-          - name: "{{ docker_network_name }"
+          - name: "{{ docker_network_name }}"
         aliases: my_network
         healthcheck:
           - test: [ "CMD", "curl", "--fail", "http://localhost:{{ application_port }}/" ]
