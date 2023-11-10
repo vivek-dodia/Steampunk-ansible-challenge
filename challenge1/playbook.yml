@@ -3,9 +3,10 @@
   hosts: localhost
   gather_facts: true
   vars:
-    - docker_network_name: my_network
-    - docker_container_name: my_web_page
-    - application_port: 8080
+    docker_network_name: my_network
+    docker_container_name: my_web_page
+    application_port: 8080
+
   tasks:
     - name: Check Docker service status
       local_action: ansible.builtin.systemd_service name=docker state=started
