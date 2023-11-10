@@ -75,6 +75,8 @@
 
     - name: Install curl
       ansible.builtin.package: state=present
+       name: curl
+       state: present
       become: true
 
     - name: Test if web page is accessible
