@@ -66,7 +66,7 @@
             start_period: 30
 
     - name: Wait for Nginx container to start
-      wait_for:
+      ansible.builtin.wait_for:
         host: localhost
         port: "{{ application_port }}"
         timeout: 30
