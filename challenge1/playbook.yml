@@ -70,8 +70,8 @@
         host: localhost
         port: "{{ application_port }}"
         timeout: 30
-        state:
-          - started
+        #state:
+         # - started
 
     - name: Install curl
       ansible.builtin.package: state=present
