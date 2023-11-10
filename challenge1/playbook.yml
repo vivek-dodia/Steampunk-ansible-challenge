@@ -21,7 +21,7 @@
       ansible.builtin.tempfile:
         state: directory
         prefix: web_deploy_
-        dir: /tmp
+        #dir: /tmp
         register: temp_dir
       check_mode: true
 
