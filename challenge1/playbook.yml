@@ -18,7 +18,7 @@
       when: docker_service_status.failed
 
     - name: Create temporary directory
-      tempfile:
+      ansible.builtin.tempfile:
         state: directory
         prefix: web_deploy_
         dir: /tmp
