@@ -28,7 +28,7 @@
     - name: Set permissions for temporary directory
       ansible.builtin.file:
         path: "{{ temp_dir.path }}"
-        mode: "75"
+        mode: "0755"
 
     - name: Copy index.html file
       copy:
